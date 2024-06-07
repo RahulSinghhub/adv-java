@@ -1,0 +1,63 @@
+package com.app.tester;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.app.entities.Brand;
+import com.app.entities.Material;
+import com.app.entities.Pen;
+import com.app.utils.Utility.*;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try(Scanner in = new Scanner(System.in)){
+			List<Pen> penList = new ArrayList<>();
+			boolean flag = false;
+			while(!flag) {
+			try {
+				System.out.println("1. Add new Pen\r\n"
+						+ "2. Update stock of aPen\r\n"
+						+ "3. Set discount of 20% for all the pens which are not at all sold in last 3 months\r\n"
+						+ "4. Remove Pens which arenever sold once listed in 9 months"+
+						"  0. Exit ");
+				int choice = in.nextInt();
+				switch(choice) {
+				case 1:System.out.println("Add pen stock");
+				       //Brand brand, String color, String inkColor,Material material, long stock, LocalDate updateDdate,
+				//LocalDate listDate, long price, float discount
+				
+				System.out.println("Brand brand, String color, String inkColor,Material material, long stock, LocalDate updateDdate,\r\n"
+						+ "			LocalDate listDate, long price, float discount");
+				      Pen p1= new Pen(Brand.valueOf(in.next()),in.next(),in.next(),Material.valueOf(in.next()),in.nextLong(),LocalDate.now(),LocalDate.parse(in.next()),in.nextLong(),in.nextFloat());
+				      penList.add(p1);
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				case 5:
+					break;
+				case 0:flag=true;
+				
+				}
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			}
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

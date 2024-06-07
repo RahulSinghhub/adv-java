@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;custom_Exception&apos; to &apos;com.app.custom_exceptions&apos;&#x0D;&#x0A;- Original project: &apos;customerapp&apos;&#x0D;&#x0A;- Original element: &apos;customerapp/src/custom_Exception&apos;&#x0D;&#x0A;- Renamed element: &apos;customerapp/src/com.app.custom_exceptions&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;custom_Exception&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;custom_Exception" name="com.app.custom_exceptions" qualified="false" references="true" stamp="1714674359552" textual="false" version="1.0"/>
+</session>

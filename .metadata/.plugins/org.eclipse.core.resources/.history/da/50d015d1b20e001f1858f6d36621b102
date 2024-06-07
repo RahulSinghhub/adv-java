@@ -1,0 +1,26 @@
+package com.app.tester;
+import java.sql.*;
+import static com.app.utils.DBUtils.openConnection;
+
+public class TestDBConnection {
+
+	public static void main(String[] args) {
+		try(Connection cn=openConnection();//get db connection
+				Statement st=cn.createStatement();//create empty statement to hold sql
+				//execute select query and get the 
+				ResultSet rst = st.executeQuery("select * from users")
+				) {
+			//resultset processing 
+			//cursor --> before the 1st row
+			while (rst.next()) {
+				System.out.println(rst.getArray(1));				
+			}
+//			System.out.println("connected to DB "+cn);//implementation class instance 
+		}//JVM : cn.close()
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

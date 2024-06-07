@@ -1,0 +1,23 @@
+package app.com.utils;
+
+import java.util.List;
+
+import app.com.core.Task;
+import static app.com.validations.CustomValidations.validateInput;
+
+public class Utility {
+	
+	public static List<Task> populateList(){
+		 List<Task> task = new ArrayList<>();
+		 task.add(validateInput("rahul", "great_guy", "2020-09-04"));
+		 task.add(validateInput("Priya", "didi", "2021-08-03"));
+		 task.add(validateInput("Shivam", "madman", "2019-06-02"));
+		 task.add(validateInput("Shushi", "eatable", "2018-05-01"));
+		 task.add(validateInput("naruto", "nevergiveup", "2017-04-05"));
+		 task.add(validateInput("byakugan", "roll", "2022-03-06"));
+		 task.add(validateInput("mots", "lovethewayyoulive", "2029-07-06"));
+		
+		return null;
+	}
+
+}

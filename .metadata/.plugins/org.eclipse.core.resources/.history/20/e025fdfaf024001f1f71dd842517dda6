@@ -1,0 +1,16 @@
+package app.com.utils;
+
+import java.util.List;
+
+import app.com.core.Task;
+
+public class Utility {
+	
+	public static List<Task> populateList(){
+		 
+		List<Task> task = new Task(0, 0, 0, null)
+		
+		return null;
+	}
+
+}

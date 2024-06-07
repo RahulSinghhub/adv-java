@@ -1,0 +1,14 @@
+package com.app.utils;
+
+
+import com.app.core.Fruit;
+
+public class Utils {
+	public void addFruit(Fruit f) {
+		
+		System.out.println("print fruit name");
+		String name = in.next();
+		
+		
+	}
+}

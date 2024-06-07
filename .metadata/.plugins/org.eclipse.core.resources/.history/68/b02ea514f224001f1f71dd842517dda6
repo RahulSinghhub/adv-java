@@ -1,0 +1,17 @@
+package app.com.utils;
+
+import java.util.List;
+
+import app.com.core.Task;
+import static app.com.validations.CustomValidations.validateInput;
+
+public class Utility {
+	
+	public static List<Task> populateList(){
+		 
+		List<Task> task = validateInput("rahul", "great_guy", "2021-02-04");
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,73 @@
+package com.app.tester;
+import java.util.Scanner;
+import com.app.core.*;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//try with resources
+		try(Scanner in = new Scanner(System.in))
+		{
+			System.out.println("enter the amount to fill in basket");
+			Fruit[] fruitbasket = new Fruit[5];
+			boolean exit = false;
+			int count=0;
+			
+			while(!exit) {
+			System.out.println("Supply options\r\n"
+					+ "1. Add Mango\r\n"
+					+ "2. Add Orange\r\n"
+					+ "3. Add Apple\r\n"
+					+ "4. Display All\r\n"
+					+ "5. Display name,color,weight,taste of all fruits"
+					+ "6. Change fruit to not fresh"
+					+ "7. Make all sour fruits stale"
+					+ "8. invoke fruit specific functionality"
+					+ "9. Exit");
+			switch(in.nextInt())
+			{
+			case 1:System.out.println("Add Mango");
+			       //what i want that user would ask me for in put so i would use add user
+			       //
+			       Fruit f1=new Mango("mango","yello",21);
+			       fruitbasket[count]=(Mango)f1;
+			       //downcast fruit but i see that it without down casting it works t
+			       break;
+			case 2:System.out.println("Add Orange");
+			       Fruit f2=new Orange("small_orange","orange",21);
+			       fruitbasket[count]=(Orange)f2;
+			       break;
+			case 3:System.out.println("Add apple");
+			      Fruit f2=new Orange("apple","red",25);
+		          fruitbasket[count]=(Apple)f2;
+			       
+			       break;
+			case 4:System.out.println("Display all");
+			       for(Fruit a:fruitbasket)
+			    	   System.out.println(a);
+			break;
+			case 5:System.out.println("Display name,col,wt");
+			break;
+			case 6:System.out.println("");
+			break;
+			case 7:System.out.println("");
+			break;
+			case 8:System.out.println("");
+			break;
+			case 0:System.out.println("Exiting");
+			       exit= true;
+			  
+			break;
+			
+			
+			}
+			}
+			
+			
+		}
+		
+
+	}
+
+}

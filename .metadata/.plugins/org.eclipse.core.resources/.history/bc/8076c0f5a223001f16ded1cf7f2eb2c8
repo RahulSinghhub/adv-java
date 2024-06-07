@@ -1,0 +1,47 @@
+package com.app.utils;
+
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.List;
+
+import com.app.entities.Brand;
+import com.app.entities.Material;
+import com.app.entities.Pen;
+import com.app.exception.Custom_exception;
+
+/*cjjcb
+ * Brand brand;
+	private String color;
+	private String inkColor;
+	private Material material;
+	private long stock;
+	private LocalDate updateDdate;
+	private LocalDate listDate;
+	private long price;
+	private float discount;
+ * 
+ * *///in.next(),in.next(),in.next(),in.next(),in.nextLong(),in.next(),in.nextLong(),in.nextFloat()
+
+public class Utility {
+	public static Pen validateInput(String brand, String color, String inkColor,String material, long stock,
+			String listDate, long price, float discount) {
+		//validate brand , materials  
+		     Brand validBrand = Brand.valueOf(brand.toUpperCase());
+		     Material validMaterial = Material.valueOf(material.toUpperCase());
+		     LocalDate validListDate = LocalDate.parse(listDate);		
+			return new Pen(validBrand,color,inkColor,validMaterial,stock,validListDate,price,discount);
+		
+	}
+	
+	public static void updateByIdAndUpdateStocks(int id,long stock,HashMap<Integer,Pen> penList) throws Custom_exception{
+		// validate id and then find stock using id from penlist then set stock by id 
+		System.out.println("now updating stock value");
+		
+		
+			
+		        
+		System.out.println("the stock is edited");
+		
+	}
+	
+}

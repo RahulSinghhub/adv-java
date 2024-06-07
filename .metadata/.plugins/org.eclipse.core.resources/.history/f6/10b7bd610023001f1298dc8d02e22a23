@@ -1,0 +1,6 @@
+package com.app.entities;
+
+public interface Brand {
+	CELLO, PARKER, REYNOLDS ;
+
+}

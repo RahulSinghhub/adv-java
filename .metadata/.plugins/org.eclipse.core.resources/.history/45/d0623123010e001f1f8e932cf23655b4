@@ -1,0 +1,16 @@
+package tester;
+
+import java.util.Map;
+import static utils.StudentCollectionUtils.*;
+
+import com.app.core.Student;
+
+public class Testforsavedetails {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Map<String,Student> map = populateMap(populateList())
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.app.utils;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+import com.app.entities.Brand;
+import com.app.entities.Material;
+import com.app.entities.Pen;
+
+/*cjjcb
+ * Brand brand;
+	private String color;
+	private String inkColor;
+	private Material material;
+	private long stock;
+	private LocalDate updateDdate;
+	private LocalDate listDate;
+	private long price;
+	private float discount;
+ * 
+ * */
+
+public class Utility {
+	public static Pen validateInput(String brand, String color, String inkColor,String material, long stock,
+			String listDate, long price, float discount) {
+				return null;
+		
+		//validate 
+		
+		
+	}
+	
+	//updateByIdAndUpdateStocks
+	
+}

@@ -1,0 +1,122 @@
+package com.app.entities;
+
+import java.time.LocalDate;
+
+public class Pen {
+	
+	private int id;
+	private static int idgenerator;
+	private Brand brand;
+	private String color;
+	private String inkColor;
+	private Material material;
+	private long stock;
+	private LocalDate updateDdate;
+	private LocalDate listDate;
+	private long price;
+	private float discount;
+	
+	public Pen() {
+		
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Brand getBrand() {
+		return brand;
+	}
+	public void setBrand(Brand brand) {
+		this.brand = brand;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public String getInkColor() {
+		return inkColor;
+	}
+	public void setInkColor(String inkColor) {
+		this.inkColor = inkColor;
+	}
+	public Material getMaterial() {
+		return material;
+	}
+	public void setMaterial(Material material) {
+		this.material = material;
+	}
+	public long getStock() {
+		return stock;
+	}
+	public void setStock(long stock) {
+		this.stock = stock;
+	}
+	public LocalDate getUpdateDdate() {
+		return updateDdate;
+	}
+	public void setUpdateDdate(LocalDate updateDdate) {
+		this.updateDdate = updateDdate;
+	}
+	public LocalDate getListDate() {
+		return listDate;
+	}
+	public void setListDate(LocalDate listDate) {
+		this.listDate = listDate;
+	}
+	public long getPrice() {
+		return price;
+	}
+	public void setPrice(long price) {
+		this.price = price;
+	}
+	public float getDiscount() {
+		return discount;
+	}
+	public void setDiscount(float discount) {
+		this.discount = discount;
+	}
+	@Override
+	public String toString() {
+		return "Pen [id=" + id + ", brand=" + brand + ", color=" + color + ", inkColor=" + inkColor + ", material="
+				+ material + ", stock=" + stock + ", updateDdate=" + updateDdate + ", listDate=" + listDate + ", price="
+				+ price + ", discount=" + discount + "]";
+	}
+	public Pen(int id, Brand brand, String color, String inkColor, Material material, long stock, LocalDate updateDdate,
+			LocalDate listDate, long price, float discount) {
+		super();
+		this.id = ++idgenerator;
+		this.brand = brand;
+		this.color = color;
+		this.inkColor = inkColor;
+		this.material = material;
+		this.stock = stock;
+		this.updateDdate = LocalDate.now();
+		this.listDate = listDate;
+		this.price = price;
+		this.discount = discount;
+	}
+	
+	public Pen( Brand brand, String color, String inkColor,Material material, long stock,
+			LocalDate listDate, long price, float discount) {
+		super();
+		this.brand = brand;
+		this.color = color;
+		this.inkColor = inkColor;
+		this.material = material;
+		this.stock = stock;
+		this.updateDdate = updateDdate;
+		this.listDate = listDate;
+		this.price = price;
+		this.discount = discount;
+	}
+	
+	
+	
+	
+	
+
+}

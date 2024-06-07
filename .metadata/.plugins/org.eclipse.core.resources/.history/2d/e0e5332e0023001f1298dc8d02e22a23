@@ -1,0 +1,9 @@
+package com.app.entities;
+
+public class Pen {
+	
+	private int id;
+	private static int idgenerator;
+	
+
+}

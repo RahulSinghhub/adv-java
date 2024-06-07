@@ -1,0 +1,26 @@
+package com.app.tester;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.app.entities.Pen;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try(Scanner in = new Scanner(System.in)){
+			List<Pen> penList = new ArrayList<>();
+			
+			
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

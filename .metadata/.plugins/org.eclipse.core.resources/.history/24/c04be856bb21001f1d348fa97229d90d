@@ -1,0 +1,10 @@
+package codeforces;
+
+public class ProblemGenerator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

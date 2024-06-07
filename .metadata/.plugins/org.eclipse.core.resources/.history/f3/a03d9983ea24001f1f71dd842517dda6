@@ -1,0 +1,30 @@
+package app.com.core;
+
+public class Task {
+	
+	private static int taskId;
+	static {
+		taskId=0;
+	}
+	private int taskName;
+	private int description;
+	private int taskDate;
+	private Status status;
+	private static boolean active;
+	
+	public Task(int taskName, int description, int taskDate, int status) {
+		super();
+		this.taskId=taskId++;
+		this.taskName = taskName;
+		this.description = description;
+		this.taskDate = taskDate;
+		this.status = status;
+		
+	}
+	
+	
+	
+	
+	
+
+}

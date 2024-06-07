@@ -1,0 +1,6 @@
+package com.app.enums;
+
+public interface Brand {
+	Cello, Parker, Reynolds;
+
+}

@@ -1,0 +1,22 @@
+package com.app.entities;
+
+import java.time.LocalDate;
+
+import com.app.enums.Brand;
+
+public class Pen {
+	
+	private int id;
+	private static int idgenerator;
+	private Brand brand;
+	private String color;
+	private String inkColor;
+	private Material material;
+	private long stock;
+	private LocalDate updateDdate;
+	private LocalDate listDate;
+	private long price;
+	private float discount;
+	
+
+}

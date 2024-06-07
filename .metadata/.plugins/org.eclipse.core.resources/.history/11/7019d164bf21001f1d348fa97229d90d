@@ -1,0 +1,47 @@
+package codeforces;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class ProblemGenerator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//planning to hold m rounds
+		//each round holds a,b, c,d,e,f,g
+		//count their frequency and then substract all the frequency with the number of rounds
+		try(Scanner in = new Scanner(System.in);){
+			int testCase = in.nextInt();
+			while(testCase>0) {
+				int n =in.nextInt();
+				int m = in.nextInt();
+				String str = in.next();
+				HashMap<Character, Integer> map  = new HashMap<>();
+				for(char ch='a';ch<='g';ch++) {
+					map.put(ch,-m);
+				}
+				for (char ch : str.toCharArray()) {
+		            if (map.containsKey(ch)) {
+		                map.put(ch, map.get(ch) + 1);
+		            }
+		        }
+				int count = 0;
+				//if 0 count them else add them if less then 0
+				for(Integer c:map.values()) {
+					if(c<0) {
+						count+=1;
+					}
+					
+				}	
+				System.out.println(count+"   "+map);
+		        testCase--;
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

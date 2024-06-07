@@ -1,0 +1,30 @@
+package tester;
+
+import static utils.StudentCollectionUtils.populateList;
+import static utils.StudentCollectionUtils.populateMap;
+
+import java.util.Map;
+import java.util.Scanner;
+
+import com.app.core.Student;
+
+public class Testforsavedetails {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try(Scanner sc = new Scanner(System.in)) {
+			Map<String,Student> map = populateMap(populateList());
+			Thread t1 = new Thread(,"c1");
+			Thread t2 = new Thread(new sortt2filt(filename,subject),"c2");
+			t1.start();
+			t2.start();
+			System.out.println("methods has started");
+			t1.join();
+			t2.join();
+		}
+		
+		
+
+	}
+
+}

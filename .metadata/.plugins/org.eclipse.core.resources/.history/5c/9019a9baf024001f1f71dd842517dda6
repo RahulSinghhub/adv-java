@@ -1,0 +1,16 @@
+package app.com.validations;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import app.com.core.Task;
+
+public class CustomValidations {
+	
+	public static List<Task> validateInput(String taskName, String description, String taskDate){
+		LocalDate date=  LocalDate.parse(taskDate);
+
+		return new Task(taskName,description,date);
+	}
+
+}

@@ -1,0 +1,48 @@
+package com.app.utils;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+import com.app.entities.Brand;
+import com.app.entities.Material;
+import com.app.entities.Pen;
+
+/*cjjcb
+ * Brand brand;
+	private String color;
+	private String inkColor;
+	private Material material;
+	private long stock;
+	private LocalDate updateDdate;
+	private LocalDate listDate;
+	private long price;
+	private float discount;
+ * 
+ * */
+
+public class Utility {
+	Scanner in = new Scanner(System.in);	
+	public Pen addPen() {
+		System.out.println("Enter the brand");
+		String brand = in.next();
+		System.out.println("Enter the inkcolor");
+		String inkcolor  = in.next();
+		System.out.println("Enter the material");
+		String material = in.next();
+		System.out.println("Enter the stock");
+		Long stock = in.nextLong();
+		System.out.println("Enter the updateDdate");
+		LocalDate updateDdate = LocalDate.now();
+		System.out.println("Enter the listDate");
+		String listDate = in.next();
+		System.out.println("Enter the price");
+		Long price = in.nextLong();
+		System.out.println("Enter the discount");
+		float discount = in.nextFloat();
+		
+		
+		return new Pen(Brand.valueOf(brand),inkcolor,Material.valueOf(material),stock,updateDdate,LocalDate.parse(listDate),price,discount);
+		
+	}
+
+}
