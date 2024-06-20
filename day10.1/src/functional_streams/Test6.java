@@ -40,8 +40,8 @@ public class Test6 {
 		// --get
 		Optional<Student> optional = map.values() // Collection<Student>
 				.stream() // Stream<Student>
-				.filter(s -> s.getSubject() == Subject.SE) // Stream<Student> : filtered
-				.max((s1, s2) -> ((Double) s1.getGpa()).compareTo(s2.getGpa()));
+				.filter(s -> s.getSubject() == Subject.JAVA) // Stream<Student> : filtered
+				.min((s1, s2) -> ((Double) s2.getGpa()).compareTo(s1.getGpa()));
 		if (optional.isPresent())
 			System.out.println("Topper " + optional.get());
 		else

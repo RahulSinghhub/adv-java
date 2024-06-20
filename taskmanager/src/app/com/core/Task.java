@@ -2,12 +2,11 @@ package app.com.core;
 
 import java.time.LocalDate;
 
-public class Task {
+public class Task /* implements Comparable<Task> */ {
 	
-	private static int taskId;
-	static {
-		taskId=0;
-	}
+	private  int taskId;
+	private static int taskIdgeneator=0;
+	
 	private String taskName;
 	private String description;
 	private LocalDate taskDate;
@@ -16,7 +15,7 @@ public class Task {
 	
 	public Task(String taskName, String description, LocalDate taskDate) {
 		super();
-		this.taskId=taskId++;
+		this.taskId=taskIdgeneator++;
 		this.taskName = taskName;
 		this.description = description;
 		this.taskDate = taskDate;
@@ -24,12 +23,12 @@ public class Task {
 		this.active=true;
 	}
 
-	public static int getTaskId() {
+	public  int getTaskId() {
 		return taskId;
 	}
 
-	public static void setTaskId(int taskId) {
-		Task.taskId = taskId;
+	public  void setTaskId(int taskId) {
+		taskId = taskId;
 	}
 
 	public String getTaskName() {
@@ -74,9 +73,14 @@ public class Task {
 
 	@Override
 	public String toString() {
-		return "Task [taskName=" + taskName + ", description=" + description + ", taskDate=" + taskDate + ", status="
+		return "Task [taskId=" + taskId+" , taskName=" + taskName + ", description=" + description + ", taskDate=" + taskDate + ", status="
 				+ status + ", active=" + active + "]";
 	}
+	
+	/*
+	 * public int compareTo(Task other) { return
+	 * this.taskDate.compareTo(other.taskDate); }
+	 */
 	
 	
 

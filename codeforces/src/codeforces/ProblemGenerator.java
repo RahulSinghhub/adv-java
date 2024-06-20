@@ -1,6 +1,8 @@
 package codeforces;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class ProblemGenerator {
@@ -11,33 +13,23 @@ public class ProblemGenerator {
 		//each round holds a,b, c,d,e,f,g
 		//count their frequency and then substract all the frequency with the number of rounds
 		try(Scanner in = new Scanner(System.in);){
-			int testCase = in.nextInt();
-			while(testCase>0) {
-				int n =in.nextInt();
-				int m = in.nextInt();
-				String str = in.next();
-				HashMap<Character, Integer> map  = new HashMap<>();
-				for(char ch='A';ch<='G';ch++) {
-					map.put(ch,0);
-				}
-				
-				for (char ch : str.toCharArray()) {
-		            if (map.containsKey(ch)) {
-		                map.put(ch, map.get(ch) + 1);
-		            }
-		        }
-				
-				int count = 0;
-				//if 0 count them else add them if less then 0
-				 for (char ch = 'A'; ch <= 'G'; ch++) {
-	                    int required = m - map.get(ch);
-	                    if (required > 0) {
-	                        count += required;
-	                    }
-	                }
-				System.out.println(count);
-			}
+			/*
+			 * int testCase = in.nextInt(); while(testCase>0) { int n =in.nextInt(); int m =
+			 * in.nextInt(); String str = in.next(); HashMap<Character, Integer> map = new
+			 * HashMap<>(); for(char ch='A';ch<='G';ch++) { map.put(ch,0); }
+			 * 
+			 * for (char ch : str.toCharArray()) { if (map.containsKey(ch)) { map.put(ch,
+			 * map.get(ch) + 1); } }
+			 * 
+			 * int count = 0; //if 0 count them else add them if less then 0 for (char ch =
+			 * 'A'; ch <= 'G'; ch++) { int required = m - map.get(ch); if (required > 0) {
+			 * count += required; } } System.out.println(count); }
+			 */
 			
+			
+			int[] arr = {2,3,4,2,8,6,};
+			Arrays.stream(arr).boxed().sorted((s1,s2)->s2.compareTo(s1)).forEach(s->System.out.println(s));
+		
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
