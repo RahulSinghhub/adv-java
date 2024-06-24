@@ -123,14 +123,19 @@ public class LinkedList {
 		
 	}
 	
-	/*
-	 * public void middleElement() { System.out.println("hi"); Node temp = head; int
-	 * count=1; while(temp!=null) { count++; temp = temp.getNext();
-	 * 
-	 * } int num = 0; System.out.println(); System.out.println(0); for(int
-	 * i=1;i<count/2;i++) { System.out.println(num); num = temp.getData(); }
-	 * System.out.println(num); }
-	 */
+	
+	 public void middleElement() { 
+		 Node temp = head;
+		 Node temp1 = head;
+		 while(temp1.getNext()!=null) {
+			 System.out.println(temp.getData()+"----> "+temp1.getData());
+			 temp = temp.getNext();
+			 temp1 = temp1.getNext().getNext();
+			 
+		 }
+		 System.out.println(temp.getData());
+		 }
+	
 	
 	
 

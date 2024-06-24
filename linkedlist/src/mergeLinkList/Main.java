@@ -11,19 +11,21 @@ public class Main {
 		l1.insert(1);
 		l1.insert(2);
 		l1.insert(3);
-		l1.insert(6, 1);
-
-		
+		l1.insert(18);
+		l1.insert(2);
+		l1.insert(2);
+		/*
+		 * l1.insert(3); l1.insert(6, 1);
+		 */
 		l1.display();
-		
 		l2.insert(7);
 		l2.insert(8);
 		l2.insert(9);
 		l2.insert(9);
-		
-		l2.display();
+		//l2.display();
 				
-		l1.displayreverse(l1.getHead());
+		//l1.displayreverse(l1.getHead());
+		l1.middleElement();
 	   
 	    
 	    //l3.insertLinkalt(l1,l2);
