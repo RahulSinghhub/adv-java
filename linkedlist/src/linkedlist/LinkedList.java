@@ -11,7 +11,8 @@ public class LinkedList {
     	head=null;
     }
     
-    public boolean insert(int data) {
+    @SuppressWarnings("unused")
+	public boolean insert(int data) {
     	Node newNode = new Node(data);
     	if(newNode == null) 
     	{
